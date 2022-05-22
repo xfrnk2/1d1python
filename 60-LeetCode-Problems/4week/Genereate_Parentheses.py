@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        arr = []
+        arr: List[int] = []
         self.cal(arr, "", 0, 0, n)
         return arr
 

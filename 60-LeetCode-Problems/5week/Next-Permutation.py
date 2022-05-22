@@ -30,3 +30,4 @@ class Solution:
 
         nums[p], nums[suffix - 1] = nums[suffix - 1], nums[p]
         nums[suffix:] = nums[len(nums) - 1:suffix - 1:-1]
+        return nums
