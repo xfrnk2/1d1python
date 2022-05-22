@@ -1,11 +1,14 @@
 """
 leetcode problem solving
 """
+from typing import Optional
+
 
 class ListNode:
     """
     Definition for singly-linked list.
     """
+
     def __init__(self, val=0):
         self.val = val
         self.next = None
@@ -15,6 +18,7 @@ class Solution:
     """
     solution
     """
+
     def add_two_numbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
 
         n1, n2 = 0, 0

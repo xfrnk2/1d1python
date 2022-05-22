@@ -1,9 +1,9 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         d = {
-            ')':'(',
-            '}':'{',
-            ']':'['
+            ')': '(',
+            '}': '{',
+            ']': '['
         }
         t = []
         for c in s:

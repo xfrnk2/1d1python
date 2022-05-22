@@ -1,8 +1,11 @@
+from typing import List
+
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if len(prices) <= 1:
             return 0
-        
+
         t = [0] * len(prices) + [0]
         t[0] = prices[0]
         m = t[0]
@@ -15,5 +18,4 @@ class Solution:
                 m = prices[i]
         print(t)
 
-        
         return r

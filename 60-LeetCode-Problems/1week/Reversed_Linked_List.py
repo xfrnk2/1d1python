@@ -1,10 +1,12 @@
-# Definition for singly-linked list.
+from typing import Optional
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-        
-        
+
+
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head:
@@ -14,7 +16,7 @@ class Solution:
         while head:
             stack.append(head)
             head = head.next
-        
+
         current = stack.pop()
         final = current
         while stack:
@@ -22,6 +24,6 @@ class Solution:
             if stack:
                 current = current.next
             else:
-                current.next = None    
+                current.next = None
 
         return final

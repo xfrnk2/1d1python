@@ -1,6 +1,9 @@
+from typing import List
+
+
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
-        
+
         d = [1] * len(nums)
         for i in range(len(nums)):
             for j in range(i):
@@ -17,9 +20,9 @@ class Solution:
 #             d.append((nums[1], 2))
 #         else:
 #             d.append((nums[1], 1))
-        
+
 #         for i in range(2, len(nums)):
-            
+
 #             b = max([x[1] for x in d[:-1]])
 
 #             if d[-1][0] < nums[i]:
@@ -27,9 +30,9 @@ class Solution:
 
 #             elif d[-1][0] > nums[i] and d[-2][0] < nums[i]:
 #                 d.append((nums[i], b + 1))
-              
+
 #             elif min([x[0] for x in d]) > nums[i]:
 #                 d.append((nums[i], 1))
-#                
+#
 
 #         return d[-1][-1]
