@@ -9,8 +9,8 @@ repos:
       - id: check-yaml
       - id: mixed-line-ending
 
-
   - repo: https://github.com/PyCQA/pylint
     rev: v2.13.9
     hooks:
       - id: pylint
+      - args: ["--ignore=R0903"]
