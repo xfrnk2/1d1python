@@ -1,7 +1,7 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         ans = -1
-        d = dict()
+        d: dict = dict()
 
         for c in s:
             d[c] = d.get(c, 0) + 1

@@ -10,7 +10,7 @@ class TreeNode:
 
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        res = [[] for _ in range(2000)]
+        res: List[List[int]] = [[] for _ in range(2000)]
 
         def search(cur, lev):
             if not cur:

@@ -1,10 +1,10 @@
 import heapq
-from typing import List
+from typing import List, Tuple
 
 
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
-        heap = []
+        heap: List[Tuple[int, int]] = []
         for num in nums:
             heapq.heappush(heap, (-num, num))
 

@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def generateParenthesis(self, n: int) -> List[str]:
+    def generateParenthesis(self, n: int) -> List[int]:
         arr: List[int] = []
         self.cal(arr, "", 0, 0, n)
         return arr

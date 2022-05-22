@@ -1,6 +1,7 @@
-from typing import Optional
+from typing import Any, List, Optional
 
 
+# Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -12,7 +13,7 @@ class Solution:
         if not head:
             return head
 
-        stack = [0]
+        stack: List[Any] = [0]
         while head:
             stack.append(head)
             head = head.next

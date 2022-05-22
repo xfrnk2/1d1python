@@ -11,7 +11,7 @@ class TreeNode:
 class Solution:
     def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
         if not nums:
-            return
+            return None
 
         mid = len(nums) // 2
         root = TreeNode(nums[mid])

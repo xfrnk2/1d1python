@@ -6,7 +6,7 @@ class KthLargest:
 
     def __init__(self, k: int, nums: List[int]):
         self.k = k
-        self.nums = []
+        self.nums: List[int] = []
         for num in nums:
             heapq.heappush(self.nums, num)
         while len(self.nums) > k:

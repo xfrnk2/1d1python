@@ -10,7 +10,7 @@ class TreeNode:
 
 class Solution:
 
-    def mergeTrees(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> Optional[TreeNode]:
+    def mergeTrees(self, root1: TreeNode, root2: TreeNode) -> Optional[TreeNode]:
         # // root * depth -1, 0
         # if root1 and not root2:
         #     return root1

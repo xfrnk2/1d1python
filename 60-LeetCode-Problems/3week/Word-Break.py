@@ -12,4 +12,4 @@ class Solution:
                 wl = len(wordDict[j])
                 if i - wl >= 0:
                     d[i] += (s[i - wl:i] == wordDict[j]) and d[i - wl]
-        return d[-1]
+        return bool(d[-1])

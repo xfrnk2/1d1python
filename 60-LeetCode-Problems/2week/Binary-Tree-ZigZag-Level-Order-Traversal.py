@@ -10,7 +10,7 @@ class TreeNode:
 
 class Solution:
     def zigzagLevelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        res = [[] for _ in range(2000)]
+        res: List[List[int]] = [[] for _ in range(2000)]
 
         def search(cur, lev):
             if not cur:
@@ -23,4 +23,5 @@ class Solution:
             search(cur.right, lev + 1)
 
         search(root, 0)
-        return list(filter(lambda x: x, res))
+        ans: List[List[int]] = list(filter(lambda x: x, res))
+        return ans

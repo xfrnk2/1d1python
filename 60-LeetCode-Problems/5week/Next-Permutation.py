@@ -1,8 +1,8 @@
-from typing import List
+from typing import List, Union
 
 
 class Solution:
-    def nextPermutation(self, nums: List[int]) -> None:
+    def nextPermutation(self, nums: List[int]) -> Union[List[int], None]:
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -22,7 +22,7 @@ class Solution:
 
         if isMP:
             nums.reverse()
-            return
+            return None
 
         p = len(nums) - 1
         while nums[suffix - 1] >= nums[p]:

@@ -1,13 +1,13 @@
-from typing import List
+from typing import List, Union
 
 
 class Solution:
-    def coinChange(self, coins: List[int], amount: int) -> int:
+    def coinChange(self, coins: List[int], amount: int) -> float:
 
         coins = sorted(coins)
         inf = float('inf')
 
-        d = [[0] * (amount + 1) for _ in range(len(coins) + 1)]
+        d: Union[List[List[float]]] = [[0] * (amount + 1) for _ in range(len(coins) + 1)]
         for j in range(1, amount + 1):
             d[0][j] = inf
 

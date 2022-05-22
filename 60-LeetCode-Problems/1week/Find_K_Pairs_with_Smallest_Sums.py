@@ -1,12 +1,12 @@
 import heapq
-from typing import List
+from typing import List, Tuple
 
 
 class Solution:
     def kSmallestPairs(self, nums1: List[int], nums2: List[int], k: int) -> List[List[int]]:
 
-        res = []
-        heap = []
+        res: List[List[int]] = []
+        heap: List[Tuple[int, int, int]] = []
         for i in range(len(nums2)):
             heapq.heappush(heap, (nums1[0] + nums2[i], 0, i))
 
