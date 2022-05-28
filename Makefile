@@ -51,7 +51,7 @@ clean-test:
 lint:
 	$(VENV) ;\
 	flake8 60-LeetCode-Problems ;\
-	mypy ./60-LeetCode-Problems/*
+	mypy ./60-LeetCode-Problems ;\
 	flake8 src tests ;\
 	mypy ./src/* ;\
 	mypy ./tests/*
