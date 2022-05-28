@@ -76,3 +76,11 @@ release: clean
 install: clean
 	$(VENV) ;\
 	python setup.py install
+
+cover:
+	$(VENV) ;\
+	coverage run --source=src setup.py test ;\
+	coverage xml -i ;\
+	coveralls --service=github ;\
+	pytest --cov=src tests/ ;\
+	codecov
