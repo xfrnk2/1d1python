@@ -1,8 +1,8 @@
-from src.boj.p25k.p25000.p25083 import Solution
+from src.boj.p25k.p25000.p25083 import sprout
 from pathlib import Path
 
 def test_answer(capsys):  # noqa
-    Solution.answer()
+    sprout()
  
     expected = '         ,r\'"7\nr`-_   ,\'  ,/\n \\. ". L_r\'\n   `~\\/\n      |\n      |\n'
 
