@@ -12,7 +12,7 @@ class Solution:
         fast = head
         while fast and fast.next:
             fast = fast.next.next
-            head = head.next
+            head = head.next  # type: ignore
             if fast == head:
                 return True
         return False
