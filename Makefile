@@ -29,7 +29,7 @@ bootstrap:
 	pip install -r requirements.txt ;\
 	pip install -r requirements-test.txt ;\
 
-clean: clean-build clean-pyc
+clean: clean-build clean-pyc clean-test
 
 clean-build:
 	rm -fr build/
@@ -44,16 +44,31 @@ clean-pyc:
 	find . -name '*~' -exec rm -f {} +
 	find . -name '__pycache__' -exec rm -fr {} +
 
+clean-test:
+	rm -fr .coverage
+	rm -fr htmlcov/
+
 lint:
 	$(VENV) ;\
 	flake8 60-LeetCode-Problems ;\
 	mypy ./60-LeetCode-Problems/*
+	flake8 src tests ;\
+	mypy ./src/* ;\
+	mypy ./tests/*
 
 test:
 	$(VENV) ;\
 	python setup.py test $(TEST_ARGS)
 	make clean
 
+jenkins: test
+
+coverage: test
+	$(VENV) ;\
+	coverage run --source src setup.py test ;\
+	coverage report -m ;\
+	coverage html ;\
+	open htmlcov/index.html
 
 release: clean
 	fullrelease
