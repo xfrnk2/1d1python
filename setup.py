@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 
 __version__ = '0.0.1'
-name = 'Solve-For-Coding-Interview'
+name = '1d1python'
 
 
 def read_long_description(filename="README.md"):
@@ -17,7 +17,7 @@ setup(
     version=__version__,
     author='xfrnk2',
     author_email='xfrnk2@gmail.com',
-    url='https://github.com/xfrnk2/Solve-For-Coding-Interview',
+    url='https://github.com/xfrnk2/1d1python',
     description='1 day 1 coding with python',
     packages=find_packages(exclude=['tests', 'tests.*']),
     include_package_data=True,
