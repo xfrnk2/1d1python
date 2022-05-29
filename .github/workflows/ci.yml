@@ -40,7 +40,11 @@ jobs:
       - run: make bootstrap
       - run: make cover
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_B_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Coveralls
+        env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: coveralls --service=github
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
