@@ -6,6 +6,7 @@ cases: Sequence[Tuple[str, int]] = [
 ("2541", 1998)
 ]
 
+
 @pytest.mark.parametrize("be, expected", cases)
 def test_be_to_ad(be: str, expected: int, capsys):  # noqa
     be_to_ad(be)

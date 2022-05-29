@@ -9,7 +9,7 @@ cases: Sequence[Tuple[str, str]] = [
 
 
 @pytest.mark.parametrize("user, expected", cases)
-def test_number_of_words(user: str, expected: str, capsys):  # noqa
+def test_surprise(user: str, expected: str, capsys):  # noqa
     surprise(user)
     captured = capsys.readouterr()
     assert captured.out == f'{expected}\n'
