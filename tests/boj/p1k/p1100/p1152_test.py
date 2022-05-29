@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 from typing import Sequence, Tuple
 import pytest
 
