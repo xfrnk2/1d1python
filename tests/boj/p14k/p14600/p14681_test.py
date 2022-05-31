@@ -8,7 +8,7 @@ cases: Sequence[Tuple[str, int]] = [
 
 
 @pytest.mark.parametrize("x, y, expected", cases)
-def test_be_to_ad(x: str, y: str, expected: int, capsys):  # noqa
+def test_choose_quadrant(x: str, y: str, expected: int, capsys):  # noqa
     choose_quadrant(x, y)
     captured = capsys.readouterr()
     assert captured.out == f'{expected}\n'
