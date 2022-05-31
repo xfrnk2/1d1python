@@ -2,7 +2,7 @@ from src.boj.p14k.p14600.p14681 import choose_quadrant
 from typing import Sequence, Tuple
 import pytest
 
-cases: Sequence[Tuple[str, int]] = [
+cases: Sequence[Tuple[str, str, int]] = [
 ("12", "5", 1)
 ]
 

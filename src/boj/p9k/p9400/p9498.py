@@ -1,5 +1,5 @@
-def exam_score(score: str):
-    score = int(score)
+def exam_score(input_value: str):
+    score = int(input_value)
     if 90 <= score <= 100:
         print("A")
         return

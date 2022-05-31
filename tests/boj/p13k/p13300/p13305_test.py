@@ -2,7 +2,7 @@ from src.boj.p13k.p13300.p13305 import gas_station
 from typing import Sequence, Tuple
 import pytest
 
-cases: Sequence[Tuple[str, int]] = [
+cases: Sequence[Tuple[str, str, str, int]] = [
 ("4", "2 3 1", "5 2 4 1", 18),
 ("4", "3 3 4", "1 1 1 1", 10)
 ]
