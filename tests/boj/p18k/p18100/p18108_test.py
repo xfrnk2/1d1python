@@ -1,4 +1,4 @@
-from src.boj.p18k.p18000.p18108 import be_to_ad
+from src.boj.p18k.p18100.p18108 import be_to_ad
 from typing import Sequence, Tuple
 import pytest
 

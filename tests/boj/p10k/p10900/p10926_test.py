@@ -1,4 +1,4 @@
-from src.boj.p10k.p10000.p10926 import surprise
+from src.boj.p10k.p10900.p10926 import surprise
 from typing import Sequence, Tuple
 import pytest
 
