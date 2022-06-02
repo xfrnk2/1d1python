@@ -3,8 +3,8 @@ from typing import Sequence, Tuple
 import pytest
 
 cases: Sequence[Tuple[str, str, str]] = [
-    ("4", "3 5 2 7", "5 7 7 -1"),
-    ("4", "9 5 4 8", "-1 8 8 -1")
+("4", "3 5 2 7", "5 7 7 -1"),
+("4", "9 5 4 8", "-1 8 8 -1")
 ]
 
 
