@@ -2,7 +2,7 @@ def the_little_prince(start_point, end_point, planets) -> None:
     x1, y1 = map(int, start_point.split(" "))
     x2, y2 = map(int, end_point.split(" "))
     splitted_planets = list(planets.split(","))
-    planet_list = [] # 행성의 좌표와 반지름을 담고 있는 리스트
+    planet_list = []  # 행성의 좌표와 반지름을 담고 있는 리스트
     for i in range(len(splitted_planets)):
         planet_list.append(list(map(int, splitted_planets[i].split(" "))))
 
