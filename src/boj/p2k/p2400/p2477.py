@@ -6,8 +6,11 @@ def melon_field(melon: int, distances: List[Tuple[int]]) -> None:
     bigger_height = 0
     bigger_width_idx = 0
     bigger_height_idx = 0
-    for idx, item in enumerate(distances):
 
+
+    for idx, item in enumerate(distances): # noqa
+        distance: int
+        direction: int
 
         direction, distance = item #type: ignore # noqa
         if direction == 1 or direction == 2:
