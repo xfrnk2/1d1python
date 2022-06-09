@@ -19,12 +19,10 @@ def get_visit_count(tree_node):
     return count
 
 
-def check_is_tree(nodes: List[Tuple[int, int]]) -> bool:
-    if not nodes:
-        return True
-
+def initialize_node_dict(nodes: List[Tuple[int, int]]) -> Tuple[dict, bool]:
     node_dict = dict()
     answer = True
+
     for node in nodes:
         a, b = node
         if a not in node_dict:
@@ -37,7 +35,14 @@ def check_is_tree(nodes: List[Tuple[int, int]]) -> bool:
             node_dict[b].parent = node_dict[a]
         else:
             answer = False
+    return node_dict, answer
 
+
+def check_is_tree(nodes: List[Tuple[int, int]]) -> bool:
+    if not nodes:
+        return True
+
+    node_dict, answer = initialize_node_dict(nodes)
     if len(node_dict) == 0:
         return True
     elif answer is False:
