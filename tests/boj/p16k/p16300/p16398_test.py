@@ -2,7 +2,7 @@ from src.boj.p16k.p16300.p16398 import planet_connection
 from typing import Sequence, Tuple, List
 import pytest
 
-cases: Sequence[Tuple[str, List[str]]] = [
+cases: Sequence[Tuple[int, List[str], int]] = [
 (3, ["0 2 3", "2 0 1", "3 1 0"], 3),
 (5, ["0 6 8 1 3", "6 0 5 7 3", "8 5 0 9 4", "1 7 9 0 6", "3 3 4 6 0"], 11)
 ]
