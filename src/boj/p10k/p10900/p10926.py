@@ -1,2 +1,2 @@
-def surprise(user) -> None:
+def surprise(user: str) -> None:
     print(user + "??!")

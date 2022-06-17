@@ -10,7 +10,6 @@ def zoac(string: str) -> None:
     temp[last_idx] = alphabet
     answer = [alphabet]
 
-
     while arr:
         captured = []
         for i in range(len(arr)):

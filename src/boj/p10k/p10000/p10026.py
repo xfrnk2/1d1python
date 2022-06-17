@@ -1,16 +1,18 @@
+from typing import Any, List
+
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
 
-def check_for_party(color1, color2):
+def check_for_party(color1: str, color2: str):
     return (color1 != "B" and color2 != "B") or color1 == color2
 
 
-def check_for_normal(color1, color2):
+def check_for_normal(color1: str, color2: str):
     return color1 == color2
 
 
-def search(N, field, x, y, visited, condition):
+def search(N: int, field: List[str], x: int, y: int, visited: List[Any], condition: str):
     visited[x][y] = 1
     check = check_for_normal
     if condition == "party":

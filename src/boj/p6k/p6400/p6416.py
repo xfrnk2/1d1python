@@ -2,9 +2,9 @@ from typing import List, Tuple
 
 
 class TreeNode:
-    def __init__(self, number):
+    def __init__(self, number: int):
         self.number = number
-        self.child = []
+        self.child: List[TreeNode] = []
         self.parent = None
 
     @property
@@ -12,7 +12,7 @@ class TreeNode:
         return len(self.child)
 
 
-def get_visit_count(tree_node):
+def get_visit_count(tree_node: TreeNode):
     count = len(tree_node.child)
     for child_node in tree_node.child:
         count += get_visit_count(child_node)
@@ -32,7 +32,7 @@ def initialize_node_dict(nodes: List[Tuple[int, int]]) -> Tuple[dict, bool]:
 
         node_dict[a].child.append(node_dict[b])
         if node_dict[b].parent is None:
-            node_dict[b].parent = node_dict[a]
+            node_dict[b].parent = node_dict[a]  # type: ignore
         else:
             answer = False
     return node_dict, answer

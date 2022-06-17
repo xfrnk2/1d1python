@@ -1,4 +1,4 @@
-def the_little_prince(start_point, end_point, planets) -> None:
+def the_little_prince(start_point: str, end_point: str, planets: str) -> None:
     x1, y1 = map(int, start_point.split(" "))
     x2, y2 = map(int, end_point.split(" "))
     splitted_planets = list(planets.split(","))

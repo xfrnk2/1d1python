@@ -1,7 +1,7 @@
 import math
 
 
-def turret(input_values) -> None:
+def turret(input_values: str) -> None:
     x1, y1, r1, x2, y2, r2 = list(map(int, input_values.split()))
     distance = math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
     # 동심원이고 반지름이 같다.

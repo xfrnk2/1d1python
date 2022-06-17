@@ -1,4 +1,7 @@
-def gas_station(n, distances, stations):
+from typing import Any
+
+
+def gas_station(n: str, distances: Any, stations: Any):
     distances = list(map(int, distances.split()))
     stations = list(map(int, stations.split()))
 

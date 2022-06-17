@@ -1,4 +1,5 @@
 import math
+from typing import List
 
 
 def is_prime_num(n: int):
@@ -8,7 +9,7 @@ def is_prime_num(n: int):
     return True
 
 
-def find_three_decimal(decimals, number):
+def find_three_decimal(decimals: List[int], number: int):
     result = []
     for a in decimals:
         for b in decimals:
