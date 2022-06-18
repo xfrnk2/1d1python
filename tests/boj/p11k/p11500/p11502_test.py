@@ -1,4 +1,4 @@
-from src.boj.p11k.p11000.p11502 import three_decimal
+from src.boj.p11k.p11500.p11502 import three_decimal
 from typing import Sequence, Tuple
 import pytest
 

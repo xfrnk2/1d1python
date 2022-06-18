@@ -1,4 +1,4 @@
-from src.boj.p11k.p11000.p11508 import two_plus_one_sale
+from src.boj.p11k.p11500.p11508 import two_plus_one_sale
 from typing import Sequence, Tuple, List
 import pytest
 
