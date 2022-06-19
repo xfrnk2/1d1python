@@ -1,8 +1,17 @@
-def ioioi(n: int, string: str) -> None:
-    o_count = (n + 1)
-    target = "O".join("I" * o_count)
+def ioioi(n: int, length: int, string: str) -> None:
+    IOI = "IOI"
     answer = 0
-    for i in range(len(string)):
-        if string[i:i + len(target)] == target:
-            answer += 1
+    idx = 0
+    count = 0
+
+    while idx < length - 1:
+        if string[idx:idx + 3] == IOI:
+            idx += 2
+            count += 1
+            if count == n:
+                answer += 1
+                count -= 1
+            continue
+        idx += 1
+        count = 0
     print(answer)
