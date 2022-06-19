@@ -1,20 +1,23 @@
-from collections import deque
+import heapq
 from typing import List
 
 
 def n_big_number(n: int, matrix: List[List[int]]) -> None:
-    queue_list = [deque(sorted(matrix[i], reverse=True)) for i in range(n)]
+    heap: List[int]
+    heap = []
 
-    answer = 0
+    for i in range(n):
+        current_row_matrix = matrix[i]
 
-    for _ in range(n):
+        if heap:
+            for number in current_row_matrix:
 
-        maximum_number_idx = 0
-        maximum_number = 0
-        for idx, q in enumerate(queue_list):
-            if maximum_number < q[0]:
-                maximum_number, maximum_number_idx = q[0], idx
+                if heap[0] < number:
+                    heapq.heappop(heap)
+                    heapq.heappush(heap, number)
 
-        answer = queue_list[maximum_number_idx].popleft()
+        else:
+            for number in current_row_matrix:
+                heapq.heappush(heap, number)
 
-    print(answer)
+    print(heap[0])
