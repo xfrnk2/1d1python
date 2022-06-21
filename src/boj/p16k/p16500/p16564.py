@@ -1,7 +1,7 @@
 from typing import List
 
 
-def hios_progamer(n: int, team: List[int], point: int) -> int:
+def hios_progamer(n: int, team: List[int], point: int) -> None:
     low, high = min(team), max(team) + point
     answer = low
     team.sort()
