@@ -1,45 +1,6 @@
-def no_decretion(n: int):
-    numbers = []
-    d = [0 for _ in range(n + 1)]
-    d[1] = 10
-
-    for i in range(10):
-        stringfied_number = abs(i - 10)
-        numbers.append(stringfied_number)
-    print(numbers)
-
-
-"""
-# 00
-# 01
-# 02
-# 03
-# 04
-#
-# 55,
-#
-# 11
-# 12
-# 13
-# 14
-# 15
-# 16
-#
-# 45
-#
-# 36
-#
-# 28
-#
-# 21
-#
-#
-# 15
-#
-# 10
-#
-# 6
-# 3
-# 1
-# 0
-"""
+def no_decrement(n: int) -> None:
+    d = [[x for x in range(10, 0, -1)] for _ in range(n + 1)]
+    for i in range(2, n + 1):
+        for j in range(10):
+            d[i][j] = sum(d[i - 1][j:])
+    print(d[n][0])
