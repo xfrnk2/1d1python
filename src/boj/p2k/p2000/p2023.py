@@ -9,19 +9,19 @@ def is_decimal(n):
     return True
 
 
-def solve(n: int, l: int, x: int, result: List[int]) -> None:
-    if n <= l:
+def solve(n: int, length: int, x: int, result: List[int]) -> None:
+    if n <= length:
         result.append(x)
         return
     for i in range(1, 10):
         nx = x * 10 + i
 
         if is_decimal(nx):
-            solve(n, l + 1, nx, result)
+            solve(n, length + 1, nx, result)
 
 
 def amazing_decimal(n: int) -> List[int]:
-    answer = []
+    answer: List[int] = []
 
     for i in [2, 3, 5, 7]:
         solve(n, 1, i, answer)
