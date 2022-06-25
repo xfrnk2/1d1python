@@ -1,4 +1,4 @@
-from typing import List
+from typing import Any, List
 
 
 class Node:
@@ -9,10 +9,12 @@ class Node:
 
 
 def tree_traversal(n: int, nodes: List[List[str]]) -> List[str]:
-    node_dict = dict()
+    node_dict: dict = dict()
     node_dict[None] = None
 
     for element in nodes:
+        left: Any
+        right: Any
         value, left, right = element
         if left == ".":
             left = None

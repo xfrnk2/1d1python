@@ -26,7 +26,7 @@ def rgb_distance(n: int, _colors: List[List[int]]) -> None:
             if j == start:
                 d[1][start] = colors[1][start]
             else:
-                d[1][j] = 1e9
+                d[1][j] = 1001
 
         for k in range(2, n + 1):
             d[k][0] = min(d[k - 1][1], d[k - 1][2]) + colors[k][0]

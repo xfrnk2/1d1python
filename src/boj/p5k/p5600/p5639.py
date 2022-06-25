@@ -14,7 +14,7 @@ def binary_search_tree(pre_order: List[int]) -> List[int]:
     answer = []
 
     def post_order(start, end) -> None:
-        nonlocal answer, n, pre_order
+        nonlocal answer, pre_order
         if start > end:
             return
         right = end + 1
