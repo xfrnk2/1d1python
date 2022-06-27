@@ -1,22 +1,18 @@
 from typing import List
 
 
-def n_and_m(n: int, m: int, array: List[int]) -> None:
-    answer = set()
+def n_and_m(_: int, m: int, _array: List[int]) -> None:
+    array = sorted(set(_array))
 
-    def search(c: int, prev: List[int], n: int, m: int, arr: List[int]) -> None:
-        nonlocal answer
+    def search(c: int, prev: List[int]) -> None:
+        nonlocal m, array
         if c == m:
-            answer.add(' '.join(list(map(str, prev))))
+            print(*prev)
             return
 
-        for i in arr:
+        for i in array:
 
-            if not prev:
-                search(c + 1, prev + [i], n, m, arr)
-            elif prev[-1] <= i:
-                search(c + 1, prev + [i], n, m, arr)
+            if not prev or prev[-1] <= i:
+                search(c + 1, prev + [i])
 
-    search(0, [], n, m, sorted(array))
-    for elem in sorted(answer):
-        print(elem)
+    search(0, [])
