@@ -1,5 +1,8 @@
+from typing import Any, List
+
+
 def solve(n: int):
-    d = [[0, [1]] for _ in range(n + 1)]
+    d: List[Any] = [[0, [1]] for _ in range(n + 1)]
 
     for i in range(2, n + 1):
 

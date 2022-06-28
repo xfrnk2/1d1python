@@ -9,7 +9,7 @@ cases: Sequence[Tuple[int, List[Tuple[int, int]], int]] = [
 
 
 @pytest.mark.parametrize("n, points, expected", cases)
-def test_draw_arrow(n: int, points: List[Tuple[int]], expected: str, capsys):  # noqa
+def test_draw_arrow(n: int, points: List[Tuple[int, int]], expected: str, capsys):  # noqa
     draw_arrow(n, points)
     captured = capsys.readouterr()
     assert captured.out == f'{expected}\n'

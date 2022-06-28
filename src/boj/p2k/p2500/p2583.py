@@ -1,7 +1,8 @@
 import sys
 from typing import List
-sys.setrecursionlimit(10 ** 6)
+
 input = sys.stdin.readline
+sys.setrecursionlimit(10 ** 6)
 
 
 def get_areas(m: int, n: int, k: int, squares: List[List[int]]) -> None:
