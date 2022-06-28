@@ -9,7 +9,7 @@ cases: Sequence[Tuple[int, str]] = [
 
 
 @pytest.mark.parametrize("number, expected", cases)
-def test_fibo_six(number: int, expected: str, capsys):  # noqa
+def test_make_one(number: int, expected: str, capsys):  # noqa
     make_one(number)
     captured = capsys.readouterr()
     assert captured.out == f'{expected}\n'
