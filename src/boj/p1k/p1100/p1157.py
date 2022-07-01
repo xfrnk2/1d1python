@@ -1,5 +1,5 @@
 def word_study(word: str) -> None:
-    counter = {}
+    counter: dict = {}
     for c in word:
         if c.islower():
             c = c.upper()
