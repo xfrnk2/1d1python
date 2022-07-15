@@ -32,6 +32,7 @@ def work(n: int, m: int, tomato_points: deque, box: List[List[int]]) -> int:
 
 
 def tomato(n: int, m: int, box: List[List[int]]) -> int:
+    tomato_points: deque
     tomato_points = deque([])
     tomato_status = []
 
