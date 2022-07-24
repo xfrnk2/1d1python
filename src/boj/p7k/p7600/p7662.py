@@ -1,5 +1,5 @@
-from typing import List, Tuple
 import heapq
+from typing import List, Tuple
 
 
 def synchronize(heap_list, visit) -> None:

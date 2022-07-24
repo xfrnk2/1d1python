@@ -11,7 +11,7 @@ def contact(n: int, first: int, nodes: List[int]) -> int:
 
     next_nodes = deque(edges[first])
     while next_nodes:
-
+        temp: deque
         temp = deque([])
         for t in next_nodes:
 

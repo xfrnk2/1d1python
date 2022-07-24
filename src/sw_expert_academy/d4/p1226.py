@@ -19,7 +19,7 @@ def maze(field: List[str]):
     q = deque([start])
 
     while q:
-        x, y = q.pop()
+        x, y = q.pop()  # type: ignore
         visit[x][y] = 1
 
         for i in range(4):
