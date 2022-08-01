@@ -15,5 +15,5 @@ cases: Sequence[Tuple[int, List[List[int]], int]] = [
 
 
 @pytest.mark.parametrize("n, field, expected", cases)
-def test_roll_cake(n: int, field: List[int], expected: int):  # noqa
+def test_roll_cake(n: int, field: List[List[int]], expected: int):  # noqa
     assert baby_shark(n, field) == expected

@@ -6,7 +6,7 @@ dx = [-1, 1, 0, 0]
 
 
 def get_eatable_fish_coordinates(size: int, field: List[List[int]], distance: List[List[Any]]) -> List[
-    Tuple[int, int, int]]:
+        Tuple[int, int, int]]:
     n = len(field)
     result = []
     for i in range(n):
@@ -77,5 +77,5 @@ def baby_shark(n: int, field: List[List[int]]) -> int:
         if required_fish <= 0:
             size += 1
             required_fish = size
- 
+
     return move_count
