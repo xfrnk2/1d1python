@@ -2,7 +2,7 @@ import itertools
 from typing import Dict, Iterable, List
 
 
-def exchange_xy(array: Iterable[List[int]]) -> List[List[int]]:
+def exchange_xy(array: Iterable[List[int]]) -> Iterable[list[int]]:
     return list(itertools.zip_longest(*array, fillvalue=0))
 
 
