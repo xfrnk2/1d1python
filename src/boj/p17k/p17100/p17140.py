@@ -1,15 +1,15 @@
 import itertools
-from typing import Dict, Iterable, List
+from typing import List
 
 
-def exchange_xy(array: Iterable[List[int]]) -> Iterable[list[int]]:
+def exchange_xy(array: List[List[int]]) -> List[List[int]]:
     return list(itertools.zip_longest(*array, fillvalue=0))
 
 
 def extract(array: List[List[int]]) -> List[List[int]]:
     result = []
     for i in range(len(array)):
-        counter: Dict[int, int] = {}
+        counter = {}
         for j in range(len(array[0])):
             if array[i][j] == 0:
                 continue
